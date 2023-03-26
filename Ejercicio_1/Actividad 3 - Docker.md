@@ -16,7 +16,7 @@
 docker run -d -p 1234:80 --name servidor php:7.4-apache
 ```
 
-![](C:\Users\Ismael\Desktop\Distancia DAW\[DAW] Despliegue de aplicaciones Web\Tareas Entregables\2doParcial\Tarea3\imagenes_EJ1\1.png)
+![imagen-1](https://github.com/IsmaBM/Actividad3-Docker/blob/main/Ejercicio_1/imagenes_EJ1/1.png)
 
 Podemos visualizar el estado y el tamaño del contenedor con el siguiente comando.
 
@@ -24,7 +24,7 @@ Podemos visualizar el estado y el tamaño del contenedor con el siguiente comand
 docker ps -a -s
 ```
 
-![](C:\Users\Ismael\Desktop\Distancia DAW\[DAW] Despliegue de aplicaciones Web\Tareas Entregables\2doParcial\Tarea3\imagenes_EJ1\1-1.png)
+![imagen-2](https://github.com/IsmaBM/Actividad3-Docker/blob/main/Ejercicio_1/imagenes_EJ1/1-1.png)
 
 2. A continuación, colocaremos un sitio web ubicado en la ruta relativa **`Escritorio/miWeb`** de mi pc en la ruta **`/var/www/html`** del servidor para poder visualizarlo desde el navegador utilizando los siguientes comandos.
 
@@ -34,9 +34,9 @@ docker cp Escritorio/miWeb/assets servidor:/var/www/html
 docker cp Escritorio/miWeb/images servidor:/var/www/html
 ```
 
-![](C:\Users\Ismael\Desktop\Distancia DAW\[DAW] Despliegue de aplicaciones Web\Tareas Entregables\2doParcial\Tarea3\imagenes_EJ1\3.png)
+![imagen-3](https://github.com/IsmaBM/Actividad3-Docker/blob/main/Ejercicio_1/imagenes_EJ1/3.png)
 
-![](C:\Users\Ismael\Desktop\Distancia DAW\[DAW] Despliegue de aplicaciones Web\Tareas Entregables\2doParcial\Tarea3\imagenes_EJ1\4.png)
+![imagen-4](https://github.com/IsmaBM/Actividad3-Docker/blob/main/Ejercicio_1/imagenes_EJ1/4.png)
 
 3. Por último colocaremos el archivo **`cabeceras.php`** en la ruta del servidor mencionada anteriormente.
 
@@ -44,7 +44,7 @@ docker cp Escritorio/miWeb/images servidor:/var/www/html
 docker cp Escritorio/miWeb/cabeceras.php servidor:/var/www/html
 ```
 
-![](C:\Users\Ismael\Desktop\Distancia DAW\[DAW] Despliegue de aplicaciones Web\Tareas Entregables\2doParcial\Tarea3\imagenes_EJ1\5.png)
+![imagen-5](https://github.com/IsmaBM/Actividad3-Docker/blob/main/Ejercicio_1/imagenes_EJ1/5.png)
 
 El contenido del archivo *.php* es el siguiente:
 
@@ -60,7 +60,7 @@ foreach (getallheaders() as $nombre => $valor){
 
 Y así lo vemos en el navegador:
 
-![](C:\Users\Ismael\Desktop\Distancia DAW\[DAW] Despliegue de aplicaciones Web\Tareas Entregables\2doParcial\Tarea3\imagenes_EJ1\7.png)
+![imagen-6](https://github.com/IsmaBM/Actividad3-Docker/blob/main/Ejercicio_1/imagenes_EJ1/7.png)
 
 Volvemos a visualizar el estado y tamaño del contenedor:
 
@@ -68,7 +68,7 @@ Volvemos a visualizar el estado y tamaño del contenedor:
 docker ps -a -s
 ```
 
-![](C:\Users\Ismael\Desktop\Distancia DAW\[DAW] Despliegue de aplicaciones Web\Tareas Entregables\2doParcial\Tarea3\imagenes_EJ1\9.png)
+![imagen-7](https://github.com/IsmaBM/Actividad3-Docker/blob/main/Ejercicio_1/imagenes_EJ1/9.png)
 
 4. Para finalizar está práctica borraremos el contenedor, podemos hacerlo parando el contenedor para luego borrarlo o forzar su borrado como vemos a continuación.
 
@@ -77,7 +77,7 @@ dokcer rm -f servidor
 docker ps -a
 ```
 
-![](C:\Users\Ismael\Desktop\Distancia DAW\[DAW] Despliegue de aplicaciones Web\Tareas Entregables\2doParcial\Tarea3\imagenes_EJ1\8.png)
+![imagen-8](https://github.com/IsmaBM/Actividad3-Docker/blob/main/Ejercicio_1/imagenes_EJ1/8.png)
 
 ### Servidor de Base de Datos
 
@@ -87,7 +87,7 @@ docker ps -a
 docker pull mariadb:10.10
 ```
 
-![](C:\Users\Ismael\Desktop\Distancia DAW\[DAW] Despliegue de aplicaciones Web\Tareas Entregables\2doParcial\Tarea3\imagenes_EJ1\10.png)
+![imagen-9](https://github.com/IsmaBM/Actividad3-Docker/blob/main/Ejercicio_1/imagenes_EJ1/10.png)
 
 2. Creamos un contenedor que se llame **`bbdd`** a partir de esa imagen, en cuya creación contenga las variables de contraseña de root igual a **`root`**, base de datos creada automáticamente al iniciar con el nombre **`base1`** y usuario **`daw`** con contraseña **`laboral1`**. 
 
@@ -100,7 +100,7 @@ docker run -d --name bbdd \
 mariadb:10.10
 ```
 
-![](C:\Users\Ismael\Desktop\Distancia DAW\[DAW] Despliegue de aplicaciones Web\Tareas Entregables\2doParcial\Tarea3\imagenes_EJ1\11.png)
+![imagen-10](https://github.com/IsmaBM/Actividad3-Docker/blob/main/Ejercicio_1/imagenes_EJ1/11.png)
 
 3. A continuación entramos en el bash del contenedor para conectarnos como root y proceder a crear la **`tabla1`** dentro de la base de datos **`base1`**.
 
@@ -108,7 +108,7 @@ mariadb:10.10
 docker exec -it bbdd bash
 ```
 
-![](C:\Users\Ismael\Desktop\Distancia DAW\[DAW] Despliegue de aplicaciones Web\Tareas Entregables\2doParcial\Tarea3\imagenes_EJ1\17.png)
+![imagen-11](https://github.com/IsmaBM/Actividad3-Docker/blob/main/Ejercicio_1/imagenes_EJ1/17.png)
 
 ```mysql
 mariadb -u root -p
@@ -119,7 +119,7 @@ show tables;
 exit
 ```
 
-![](C:\Users\Ismael\Desktop\Distancia DAW\[DAW] Despliegue de aplicaciones Web\Tareas Entregables\2doParcial\Tarea3\imagenes_EJ1\13.png)
+![imagen-12](https://github.com/IsmaBM/Actividad3-Docker/blob/main/Ejercicio_1/imagenes_EJ1/13.png)
 
 4. Nos conectamos como **`daw`** y comprobamos que existen **`base1`** y **`tabla1`**.
 
@@ -131,7 +131,7 @@ show tables;
 exit
 ```
 
-![](C:\Users\Ismael\Desktop\Distancia DAW\[DAW] Despliegue de aplicaciones Web\Tareas Entregables\2doParcial\Tarea3\imagenes_EJ1\14.png)
+![imagen-13](https://github.com/IsmaBM/Actividad3-Docker/blob/main/Ejercicio_1/imagenes_EJ1/14.png)
 
 5. Comprobamos que la imagen de **`mariadb`** no se puede borrar mientras haya un contenedor creado a partir de esa imagen ejecutándose.
 
@@ -141,7 +141,7 @@ docker images
 docker rmi mariadb:10.10
 ```
 
-![](C:\Users\Ismael\Desktop\Distancia DAW\[DAW] Despliegue de aplicaciones Web\Tareas Entregables\2doParcial\Tarea3\imagenes_EJ1\15.png)
+![imagen-14](https://github.com/IsmaBM/Actividad3-Docker/blob/main/Ejercicio_1/imagenes_EJ1/15.png)
 
 6. Por último procedemos a borrar el contenedor.
 
@@ -150,4 +150,4 @@ docker rm -f bbdd
 docker ps -a
 ```
 
-![](C:\Users\Ismael\Desktop\Distancia DAW\[DAW] Despliegue de aplicaciones Web\Tareas Entregables\2doParcial\Tarea3\imagenes_EJ1\16.png)
+![imagen-15](https://github.com/IsmaBM/Actividad3-Docker/blob/main/Ejercicio_1/imagenes_EJ1/16.png)
