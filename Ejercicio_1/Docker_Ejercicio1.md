@@ -1,14 +1,15 @@
-**Autor:** Ismael Fernando Brito Monar
+**Autor:** IsmaBM
 
-# Actividad 3 - Docker
+Table of Contents
+=================
 
-## Índice
+* [Ejercicio 1 - Trabajo con imágenes](#ejercicio-1---trabajo-con-imágenes)
+   * [Servidor web](#servidor-web)
+   * [Servidor de Base de Datos](#servidor-de-base-de-datos)
 
-[TOC]
+# Ejercicio 1 - Trabajo con imágenes
 
-## Ejercicio 1 - Trabajo con imágenes
-
-### Servidor web
+## Servidor web
 
 1. Vamos a arrancar un contenedor usando la instancia de la imagen **`php:7.4-apache`** y que sea accesible desde el puerto 1234, para ello podemos descargar la imagen con el comando *docker pull* o ejecutar directamente el comando *docker run* como se muestra a continuación y en el caso de no tener la imagen se descargará antes.
 
@@ -79,7 +80,7 @@ docker ps -a
 
 ![imagen-8](https://github.com/IsmaBM/Actividad3-Docker/blob/main/Ejercicio_1/imagenes_EJ1/8.png)
 
-### Servidor de Base de Datos
+## Servidor de Base de Datos
 
 1. Descargamos la imagen de **`mariadb 10.10`**.
 
